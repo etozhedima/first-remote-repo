@@ -4,7 +4,7 @@ import "fmt"
 
 var paymentID = gemPayID()
 
-func gemPayID() func() int { // генерируем уникальный айди платежа, не повторяющийся ни у одного платящегося
+func gemPayID() func() int { // генерируем уникальный айди платежа, не повторяющийся ни у одного платящего
 	id := 0
 	return func() int {
 		id++

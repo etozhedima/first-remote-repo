@@ -32,7 +32,7 @@ func (c *Company) CancelPay(payId int) (string, error) {
 		return "", fmt.Errorf("платеж с айди %d не найден. Отмена платежа невозможна", payId)
 	}
 	c.Balance += c.PaymentsInfo[payId].PayValue
-	//перезапись всей структуры выглядит Payments выглядит как костыль
+	//перезапись всей структуры Payments выглядит как костыль
 	payment := c.PaymentsInfo[payId]
 	payment.PayStatus = false
 	c.PaymentsInfo[payId] = payment
